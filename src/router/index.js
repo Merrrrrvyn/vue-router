@@ -83,7 +83,6 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   // 从from跳转到to
   document.title = to.matched[0].meta.title;
-  // console.log('beforeEach()');
   next();
   // 可判断用户是否登录，若登录，则next(),否则next('/Login')
   // if (isLogin) {
